@@ -1,5 +1,12 @@
 <?php
-include("./include/header.php")
+include("./include/header.php");
+
+if (isset($_GET['search'])) {
+    $keyword = $_GET['search'];
+
+    $posts = $db->prepare('SELECT * FROM posts WHERE title LIKE :keyword');
+    $posts->execute(['keyword' => "%$keyword%"]);
+}
 ?>
 
 <section class="py-3">
