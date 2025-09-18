@@ -1,3 +1,10 @@
+<?php
+$query_slider = "SELECT * FROM posts_slider";
+
+$posts_slider = $db->query($query_slider);
+
+?>
+
 <section>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
