@@ -1,4 +1,12 @@
 <?php
+
+include("./include/config.php");
+include("./include/db.php");
+
+$query = "SELECT * FROM categories";
+
+$categories = $db->query($query);
+
 ?>
 
 <!DOCTYPE html>
